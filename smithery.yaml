@@ -1,3 +1,28 @@
 name: agent-delegation-mcp
-description: MEOK AI Labs - Uagent delegation
+description: MEOK AI Labs - AI Governance & Compliance
 version: 1.0.0
+tools:
+- name: delegate_task
+  description: ''
+  parameters:
+  - name: agent_id
+    type: string
+    required: true
+  - name: task_description
+    type: string
+    required: true
+  - name: priority
+    type: string
+    required: false
+- name: task_status
+  description: ''
+  parameters:
+  - name: task_id
+    type: string
+    required: true
+- name: list_pending_tasks
+  description: ''
+  parameters:
+  - name: agent_id
+    type: string
+    required: true
