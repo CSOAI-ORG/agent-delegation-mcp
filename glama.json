@@ -1,0 +1,10 @@
+{
+  "name": "agent-delegation-mcp",
+  "description": "MEOK AI Labs \u2014 agent-delegation-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/agent-delegation-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
