@@ -1,38 +1,66 @@
 {
   "name": "agent-delegation-mcp",
-  "description": "MEOK AI Labs - AI Governance & Compliance",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Create and delegate tasks to specialized agents, track progress, and manage task lifecycle. Supports",
   "version": "1.0.0",
   "tools": [
     {
-      "name": "delegate_task",
-      "description": "",
+      "name": "create_task",
+      "description": "Create a new delegatable task. Required capabilities as comma-separated string.",
       "parameters": {
         "type": "object",
         "properties": {
-          "agent_id": {
+          "title": {
             "type": "string"
           },
-          "task_description": {
+          "description": {
             "type": "string"
           },
           "priority": {
             "type": "string"
+          },
+          "required_capabilities": {
+            "type": "string"
+          },
+          "timeout_seconds": {
+            "type": "integer"
           }
         },
         "required": [
-          "agent_id",
-          "task_description"
+          "title",
+          "description"
         ]
       }
     },
     {
-      "name": "task_status",
-      "description": "",
+      "name": "delegate_task",
+      "description": "Assign a pending task to a specific agent.",
       "parameters": {
         "type": "object",
         "properties": {
           "task_id": {
             "type": "string"
+          },
+          "agent_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "task_id",
+          "agent_id"
+        ]
+      }
+    },
+    {
+      "name": "get_task_status",
+      "description": "Check the current status and progress of a task.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string"
+          },
+          "include_history": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -41,17 +69,37 @@
       }
     },
     {
-      "name": "list_pending_tasks",
-      "description": "",
+      "name": "list_available_agents",
+      "description": "List all registered agents and their capabilities. Optionally filter by required capability.",
       "parameters": {
         "type": "object",
         "properties": {
-          "agent_id": {
+          "capability_filter": {
             "type": "string"
           }
         },
+        "required": []
+      }
+    },
+    {
+      "name": "complete_task",
+      "description": "Mark a task as complete with results, or as failed with error details.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string"
+          },
+          "success": {
+            "type": "boolean"
+          }
+        },
         "required": [
-          "agent_id"
+          "task_id",
+          "result"
         ]
       }
     }

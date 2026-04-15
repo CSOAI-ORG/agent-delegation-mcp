@@ -91,11 +91,11 @@ _AGENTS.update(DEFAULT_AGENTS)
 VALID_PRIORITIES = ["critical", "high", "medium", "low"]
 VALID_STATUSES = ["pending", "assigned", "in_progress", "completed", "failed", "cancelled"]
 
-mcp = FastMCP("agent-delegation-mcp", instructions="Create and delegate tasks to specialized agents, track progress, and manage task lifecycle. Supports priority queuing and capability-based agent matching.")
+mcp = FastMCP("agent-delegation", instructions="Create and delegate tasks to specialized agents, track progress, and manage task lifecycle. Supports priority queuing and capability-based agent matching.")
 
 
 @mcp.tool()
-async def create_task(title: str, description: str, priority: str = "medium", required_capabilities: str = "", timeout_seconds: int = 3600, api_key: str = "") -> str:
+def create_task(title: str, description: str, priority: str = "medium", required_capabilities: str = "", timeout_seconds: int = 3600, api_key: str = "") -> str:
     """Create a new delegatable task. Required capabilities as comma-separated string."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -164,7 +164,7 @@ async def create_task(title: str, description: str, priority: str = "medium", re
 
 
 @mcp.tool()
-async def delegate_task(task_id: str, agent_id: str, api_key: str = "") -> str:
+def delegate_task(task_id: str, agent_id: str, api_key: str = "") -> str:
     """Assign a pending task to a specific agent."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -227,7 +227,7 @@ async def delegate_task(task_id: str, agent_id: str, api_key: str = "") -> str:
 
 
 @mcp.tool()
-async def get_task_status(task_id: str, include_history: bool = False, api_key: str = "") -> str:
+def get_task_status(task_id: str, include_history: bool = False, api_key: str = "") -> str:
     """Check the current status and progress of a task."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -286,7 +286,7 @@ async def get_task_status(task_id: str, include_history: bool = False, api_key: 
 
 
 @mcp.tool()
-async def list_available_agents(capability_filter: str = "", api_key: str = "") -> str:
+def list_available_agents(capability_filter: str = "", api_key: str = "") -> str:
     """List all registered agents and their capabilities. Optionally filter by required capability."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -338,7 +338,7 @@ async def list_available_agents(capability_filter: str = "", api_key: str = "") 
 
 
 @mcp.tool()
-async def complete_task(task_id: str, result: str, success: bool = True, api_key: str = "") -> str:
+def complete_task(task_id: str, result: str, success: bool = True, api_key: str = "") -> str:
     """Mark a task as complete with results, or as failed with error details."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
