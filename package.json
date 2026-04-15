@@ -9,5 +9,6 @@
   },
   "dependencies": {
     "mcp": "^1.0.0"
-  }
+  },
+  "description": "Agent Delegation MCP server. Tools: create task, delegate task, get task status. Built by MEOK AI Labs."
 }

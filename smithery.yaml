@@ -1,6 +1,6 @@
 name: agent-delegation-mcp
-description: Create and delegate tasks to specialized agents, track progress, and
-  manage task lifecycle. Supports
+description: 'Agent Delegation MCP server. Tools: create task, delegate task, get
+  task status. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: create_task
