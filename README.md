@@ -1,67 +1,38 @@
-# Agent Delegation MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Create and delegate tasks to specialized agents with capability-based matching
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/agent-delegation-mcp)](https://github.com/CSOAI-ORG/agent-delegation-mcp/stargazers)
+
+# uagentU delegationU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/agent-delegation-mcp)](https://www.npmjs.com/package/@meok-ai/agent-delegation-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/agent-delegation-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install agent-delegation-mcp
+# or
+npm install -g @meok-ai/agent-delegation-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install agent-delegation-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `create_task`
-Create a new delegatable task with priority and required capabilities. Returns compatible agents.
-
-**Parameters:**
-- `title` (str): Task title
-- `description` (str): Task description
-- `priority` (str): Priority level — 'critical', 'high', 'medium', 'low'
-- `required_capabilities` (str): Comma-separated capabilities (e.g., 'code_generation,testing')
-- `timeout_seconds` (int): Task timeout (default 3600)
-
-### `delegate_task`
-Assign a pending task to a specific agent. Validates capability match and agent capacity.
-
-**Parameters:**
-- `task_id` (str): Task identifier
-- `agent_id` (str): Agent to assign to
-
-### `get_task_status`
-Check the current status and progress of a task.
-
-**Parameters:**
-- `task_id` (str): Task identifier
-- `include_history` (bool): Include full event history
-
-### `list_available_agents`
-List all registered agents and their capabilities. Optionally filter by required capability.
-
-**Parameters:**
-- `capability_filter` (str): Comma-separated capabilities to filter by
-
-### `complete_task`
-Mark a task as complete with results, or as failed with error details.
-
-**Parameters:**
-- `task_id` (str): Task identifier
-- `result` (str): Result text or error message
-- `success` (bool): Whether task succeeded (default True)
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
