@@ -111,6 +111,15 @@ def create_task(title: str, description: str, priority: str = "medium", required
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        title (str): The title to analyze or process.
+        description (str): The description to analyze or process.
+        priority (str): The priority to analyze or process.
+        required_capabilities (str): The required capabilities to analyze or process.
+        timeout_seconds (int): The timeout seconds to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -210,6 +219,12 @@ def delegate_task(task_id: str, agent_id: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        task_id (str): The task id to analyze or process.
+        agent_id (str): The agent id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -303,6 +318,12 @@ def get_task_status(task_id: str, include_history: bool = False, api_key: str = 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        task_id (str): The task id to analyze or process.
+        include_history (bool): The include history to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -392,6 +413,11 @@ def list_available_agents(capability_filter: str = "", api_key: str = "") -> str
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        capability_filter (str): The capability filter to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -474,6 +500,13 @@ def complete_task(task_id: str, result: str, success: bool = True, api_key: str 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        task_id (str): The task id to analyze or process.
+        result (str): The result to analyze or process.
+        success (bool): The success to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
