@@ -1,3 +1,5 @@
+[![agent-delegation-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/agent-delegation-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/agent-delegation-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/agent-delegation-mcp)](https://github.com/CSOAI-ORG/agent-delegation-mcp/stargazers)
