@@ -1,3 +1,7 @@
+[![agent-delegation-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/agent-delegation-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/agent-delegation-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/agent-delegation-mcp)](https://pypi.org/project/agent-delegation-mcp/)
+
 [![agent-delegation-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/agent-delegation-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/agent-delegation-mcp)
 
 <div align="center">
