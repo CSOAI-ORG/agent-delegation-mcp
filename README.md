@@ -1,5 +1,14 @@
 <div align="center">
 
+> ## 🧱 Part of the MEOK A2A Substrate
+>
+> This MCP is 1 of 12 agent-to-agent primitives. Run the whole pipeline
+> (identity → trust → policy → firewall → rate-limit → handoff → audit
+> → governance) as one signed endpoint for **£499/mo** including 100K
+> calls — or **£0.0002 per call** pay-as-you-go.
+>
+> 👉 [meok.ai/a2a](https://meok.ai/a2a) — see the Substrate
+
 # Agent Delegation MCP
 
 **MCP server for agent delegation mcp operations**
@@ -57,3 +66,21 @@ from mcp.server.fastmcp import FastMCP
 ## License
 
 MIT © [MEOK AI Labs](https://meok.ai)
+
+<!-- meok-moat-footer-v1 -->
+---
+
+## Pairs with MEOK Governance Suite
+
+Build something that touches users? You need compliance. MEOK ships 38 governance MCPs that drop in alongside this tool — EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, FDA SaMD, MDR, Basel, MiFID II, MiCA, COPPA, and more.
+
+```bash
+# One-shot install of the governance pack
+npx meok-setup --pack governance
+```
+
+Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographically signed compliance attestations your auditor verifies independently.
+
+→ Full catalogue: [councilof.ai/catalogue](https://councilof.ai/catalogue)
+→ MEOK AI Labs: [meok.ai](https://meok.ai)
+
