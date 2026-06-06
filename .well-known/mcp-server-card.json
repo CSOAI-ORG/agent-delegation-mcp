@@ -1,0 +1,6 @@
+{
+  "serverInfo": { "name": "agent-delegation-mcp", "version": "1.0.0" },
+  "tools": [
+    {"name": "create_task", "description": "MCP tool from MEOK AI Labs"}, {"name": "delegate_task", "description": "MCP tool from MEOK AI Labs"}, {"name": "get_task_status", "description": "MCP tool from MEOK AI Labs"}, {"name": "list_available_agents", "description": "MCP tool from MEOK AI Labs"}, {"name": "complete_task", "description": "MCP tool from MEOK AI Labs"}
+  ]
+}

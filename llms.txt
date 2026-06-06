@@ -1,0 +1,36 @@
+# agent-delegation-mcp
+# **MCP server for agent delegation mcp operations**
+
+## Install
+```bash
+pip install agent-delegation-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `create_task`
+Create a new delegatable task. Required capabilities as comma-separated string.
+
+### `delegate_task`
+Assign a pending task to a specific agent.
+
+### `get_task_status`
+Check the current status and progress of a task.
+
+### `list_available_agents`
+List all registered agents and their capabilities. Optionally filter by required capability.
+
+### `complete_task`
+Mark a task as complete with results, or as failed with error details.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

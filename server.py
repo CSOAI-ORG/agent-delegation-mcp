@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Agent Delegation MCP Server - Create, delegate, track, and complete tasks across agents."""
+"""
+Agent Delegation MCP Server - Create, delegate, track, and complete tasks across agents."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, time, uuid
@@ -137,7 +137,7 @@ def create_task(title: str, description: str, priority: str = "medium", required
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -242,7 +242,7 @@ def delegate_task(task_id: str, agent_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -341,7 +341,7 @@ def get_task_status(task_id: str, include_history: bool = False, api_key: str = 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -435,7 +435,7 @@ def list_available_agents(capability_filter: str = "", api_key: str = "") -> str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -524,7 +524,7 @@ def complete_task(task_id: str, result: str, success: bool = True, api_key: str 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -598,5 +598,8 @@ def complete_task(task_id: str, result: str, success: bool = True, api_key: str 
     })
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

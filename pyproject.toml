@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "agent-delegation-mcp"
-version = "1.0.4"
+version = "1.0.6"
 readme = "README.md"
 description = "Agent Delegation MCP server. Tools: create task, delegate task, get task status. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/agent-delegation-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 agent_delegation_mcp = "server:main"

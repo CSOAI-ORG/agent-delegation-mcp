@@ -1,0 +1,9 @@
+# agent-delegation-mcp - Auto-trigger Rules
+
+When the user asks about agent delegation, use agent-delegation-mcp tools: create_task, delegate_task, get_task_status, list_available_agents, complete_task
+
+**MCP server for agent delegation mcp operations**
+
+Install: `pip install agent-delegation-mcp`
+
+By MEOK AI Labs — MIT licensed.
