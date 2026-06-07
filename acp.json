@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "agent-delegation-mcp",
+    "description": "Agent Delegation MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "agent-delegation-mcp"
+      }
+    ],
+    "capabilities": [
+      "create_task",
+      "delegate_task",
+      "get_task_status",
+      "list_available_agents",
+      "complete_task"
+    ]
+  }
+}
