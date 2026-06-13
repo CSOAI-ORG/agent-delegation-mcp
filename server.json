@@ -4,9 +4,9 @@
   "version": "1.0.8",
   "description": "Agent Delegation MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/agent-delegation-mcp",
-    "source": "https://github.com/CSOAI-ORG/agent-delegation-mcp"
+    "source": "github",
+    "id": "1210302700"
   },
   "packages": [
     {
